@@ -6,7 +6,7 @@ class ListNode:
         self.val = val
         self.next = None
     def __call__(self,node):
-        self.append(node)
+        self.appendRight(node)
         return self
     def __str__(self):
         '''
@@ -15,7 +15,7 @@ class ListNode:
         arr = []
         current = self
         while current:
-            arr.appendRight(current)
+            arr.append(str(current.val))
             current = current.next
         return ",".join(arr)
     def appendRight(self,node):
