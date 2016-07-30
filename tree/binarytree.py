@@ -4,12 +4,9 @@ This is a basic binary tree implementation
 from collections import deque
 
 def isEqual(t1,t2):
-    if t1 == None and t2 == None:
-        return True
-    elif (t1 == None and t2 != None) or (t1 != None and t2 == None):
-        return False
-    else:
-        return t1.val == t2.val and isEqual(t1.left,t2.left) and isEqual(t1.right,t2.right)
+    if t1 == None or t2 == None:
+        return t1 == t2
+    return t1.val == t2.val and isEqual(t1.left,t2.left) and isEqual(t1.right,t2.right)
 class TreeNode:
     def __init__(self,val):
         self.val = val
